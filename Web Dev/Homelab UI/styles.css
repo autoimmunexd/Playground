@@ -1,0 +1,76 @@
+body {
+    display: flex;
+}
+
+/* Define the card container */
+.card {
+    /* Set the width and height of the card */
+    width: 200px;
+    height: 300px;
+    /* Use relative positioning to allow absolute positioning of the card elements */
+    position: relative;
+    /* Add a box shadow to create a 3D effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Use flexbox to align the card content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Use a light background color */
+    background-color: white;
+  }
+  
+  /* Define the card name */
+  .card-name {
+    /* Use a large black font */
+    font-size: 24px;
+    color: black;
+    /* Add some margin and padding */
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  /* Define the card icon */
+  .card-icon {
+    /* Set the width and height of the icon to match the card */
+    width: 100px;
+    height: 100px;
+    /* Use object-fit to scale the icon to fit the card */
+    object-fit: contain;
+  }
+  
+  /* Define the card status */
+  .card-status {
+    /* Use absolute positioning to place the status at the bottom right of the card */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    /* Use flexbox to align the status elements */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Define the card text */
+  .card-text {
+    /* Use a medium black font */
+    font-size: 16px;
+    color: black;
+    /* Add some margin and padding */
+    margin: 5px;
+    padding: 5px;
+  }
+  
+  /* Define the card indicator */
+  .card-indicator {
+    /* Set the width and height of the indicator to a small circle */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /* Add some margin and padding */
+    margin: 5px;
+    padding: 5px;
+  }
+  
+  
