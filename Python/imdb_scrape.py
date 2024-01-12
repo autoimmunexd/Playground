@@ -32,11 +32,6 @@ for movie_div in movie_divs:
     for span_element in span_elements:
         print(span_element.text.strip())
 
-
-
-
-
-
 # div class sc-935ed930-0
 #title  h3 class ipc-title__text
 #metadata div - sc-935ed930-7 bHIxWH cli-title-metadata
