@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('./ubuntu.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Use 'cover' to make the background image cover the entire viewport */
+  font-family: Ubuntu;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  font-family: Ubuntu;
+  color: white;
+}
+
+#dragger {
+  min-width: 566px;
+  max-width: 900px;
+  cursor: move;
+}
+
+.main-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: rgba(56, 4, 40, 0.9);
+  font-family: 'Ubuntu Mono';
+
+}
+
+.container-left {
+  position: relative;
+  display: block;
+  width: 20%;
+  min-width: 300px;
+  height: 100%vh;
+}
+
+.container-apps {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  max-width: 900px;
+  /* Set a maximum width for the container */
+  gap: 1rem;
+  height: auto;
+  justify-content: space-between;
+  /* Adjust alignment as needed */
+}
+
+.appcard {
+  padding: 1rem;
+  border: 3px dashed white;
+  display: inline-block;
+  text-align: center;
+  border-radius: 23%;
+  height: 8.75rem;
+  width: 8.75rem;
+  /* Fixed size for app cards */
+  margin: 0.5rem;
+  /* Adjusted margin for spacing */
+  box-sizing: border-box;
+  /* Include padding and border in the width calculation */
+  flex: 0 0 auto;
+  /* Prevent app cards from growing or shrinking */
+}
+
+
+.button-start {
+  display: inline-block;
+}
+
+.button-stop {
+  display: inline-block;
+}
+
+.status {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: green;
+  left: 5.5rem;
+  bottom: 6rem;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#terminal__bar {
+  display: flex;
+  width: 100%;
+  height: 2rem;
+  align-items: center;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: linear-gradient(#504b45 0%, #3c3b37 100%);
+}
+
+#terminal__prompt--labinformation {
+  display: inline-block;
+  width: 100%;
+}
+
+#bar__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.bar__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-right: 5px;
+  font-size: 8px;
+  height: 12px;
+  width: 12px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 100%;
+  background: linear-gradient(#7d7871 0%, #595953 100%);
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 1px 0px #41403A, 0px 1px 1px 0px #474642;
+}
+
+.bar__button:hover {
+  cursor: pointer;
+}
+
+.bar__button:focus {
+  outline: none;
+}
+
+#bar__button--exit {
+  background: linear-gradient(#f37458 0%, #de4c12 100%);
+  background-clip: padding-box;
+}
+
+#bar__user {
+  color: #d5d0ce;
+  margin-left: 6px;
+  font-size: 14px;
+  line-height: 15px;
+
+}
+
+#terminal__body {
+  background: rgba(56, 4, 40, 0.9);
+  font-family: 'Ubuntu Mono';
+  height: 100%vh;
+  padding-top: 2px;
+  margin-top: -1px;
+
+}
+
+#terminal__prompt {
+  width: 100%;
+  display: flex;
+}
+
+#terminal__prompt--user {
+  color: #7eda28;
+}
+
+#terminal__prompt--location {
+  color: #4878c0;
+}
+
+#terminal__prompt--bling {
+  color: #dddddd;
+}
+
+#terminal__prompt--cursor {
+  display: block;
+  height: 17px;
+  width: 8px;
+  margin-left: 9px;
+  animation: blink 1200ms linear infinite;
+
+}
+
+@keyframes blink {
+  0% {
+    background: #ffffff;
+  }
+
+  49% {
+    background: #ffffff;
+  }
+
+  60% {
+    background: transparent;
+  }
+
+  99% {
+    background: transparent;
+  }
+
+  100% {
+    background: #ffffff;
+  }
+}
+
+@media (max-width: 600px) {
+  #terminal {
+    max-height: 90%;
+    width: 90%;
+  }
+}
