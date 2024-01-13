@@ -26,11 +26,17 @@ for movie_div in movie_divs:
     h3_elements = movie_div.find_all('h3', class_='ipc-title__text')
     span_elements = movie_div.find_all('span', class_='sc-935ed930-8 iLiQCS cli-title-metadata-item')
     #loop over each movie title and print it
+    movie_list = []
     for h3_element in h3_elements:
-        print(h3_element.text)
+        dict(name = h3_element.text)
+        for span_element in span_elements:
+            span_element.text.strip()
+            movie_list.append(movie)
     #loop over each metadata and use the python text method .strip() to remove white space
-    for span_element in span_elements:
-        print(span_element.text.strip())
+    
+        #turn each movie into a dictionary
+        #push all the movies to a list
+        #remove every movie that is older than 1972
 
 # div class sc-935ed930-0
 #title  h3 class ipc-title__text
