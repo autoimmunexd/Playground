@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
         body {
-            background-color: #25262B;
+            background-color: #111827;
             font-family: 'Roboto', sans-serif;
+            color: #A3A8B0;
         }
 
         #weather {
@@ -23,7 +25,20 @@
         }
 
         .card {
+            background-color: #1F2937;
             transition: transform 0.2s;
+        }
+
+        #data {
+            color: white;
+        }
+
+        .status {
+            height: 15px;
+            width: 15px;
+            background-color: red;
+            border-radius: 50%;
+            display: inline-block;
         }
 
         .card:hover {
@@ -31,7 +46,7 @@
         }
 
         .weather-card {
-            background-color: #f8f9fa;
+            background-color: #1F2937;
             border: 1px solid #dee2e6;
             border-radius: 10px;
             padding: 20px;
@@ -59,28 +74,53 @@
             font-size: 1rem;
             color: #6c757d;
         }
-       
     </style>
     <title>Application Selection Screen</title>
 </head>
 
 <body>
-
     <div class="container-fluid">
+        <div class="row">
+            <table id="data" class="table table-striped text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Server Uptime</th>
+                        <th scope="col">Cpu Utilization</th>
+                        <th scope="col">Memory Utlization</th>
+                        <th scope="col">Storage Utlization</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">36 hours</th>
+                        <td>35%</td>
+                        <td>60%</td>
+                        <td>4200/8000 gb</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
         <div class="row">
             <!-- Left Div (20%) -->
             <div id="weather" class="col-md-2">
-                <div class="bg-light p-3">
+                <div class="bg p-3">
                     <h5 class="mb-4">Left Side (20%)</h5>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="weather-card">
                                     <i class="wi wi-day-sunny weather-icon"></i>
-                                    <div class="temperature">25°C</div>
-                                    <div class="weather-description">Sunny</div>
+                                    <div class="temperature"> Currently : 22°F</div>
+                                    <div class="weather-description">Tonight</div>
                                     <div class="additional-details">
-                                        Humidity: 60% | Wind: 10 km/h
+                                        A chance of snow after 2am. Cloudy, with a low around 22. North wind 0 to 5 mph.
+                                        Chance of precipitation is 50%. Little or no snow accumulation expected.
+                                    </div>
+                                    <div class="weather-description">Friday</div>
+                                    <div class="additional-details">
+                                        29 Snow. Cloudy, with a high near 29. Northeast wind 5 to 10 mph. Chance of
+                                        precipitation is 100%. New snow accumulation of 3 to 5 inches possible.
                                     </div>
                                 </div>
                             </div>
@@ -91,94 +131,72 @@
 
             <!-- Right Div (80%) -->
             <div id="applications" class="col-md-10">
-                <div class="bg-light p-3">
+                <div class="bg p-3">
                     <h5 class="text-center mb-4">Application Selection</h5>
 
                     <!-- Cards (Grid System) -->
                     <div class="row justify-content-center">
 
                         <!-- Card 1 -->
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-2 mb-3">
                             <div class="card border-primary">
-                                <div class="card-body">
-                                    <h5 class="card-title">Application 1</h5>
-                                    <p class="card-text">Description of Application 1.</p>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Plex</h5>
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <p>Status:</p><span class="status"></span>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Card 2 -->
-                        <div class="col-md-4 mb-3">
-                            <div class="card border-success">
-                                <div class="card-body">
-                                    <h5 class="card-title">Application 2</h5>
-                                    <p class="card-text">Description of Application 2.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <div class="card border-success">
-                                <div class="card-body">
-                                    <h5 class="card-title">Application 3</h5>
-                                    <p class="card-text">Description of Application 3.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
+                        <!-- Card 1 -->
+                        <div class="col-md-2 mb-3">
                             <div class="card border-primary">
-                                <div class="card-body">
-                                    <h5 class="card-title">Application 1</h5>
-                                    <p class="card-text">Description of Application 1.</p>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Plex</h5>
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <p>Status:</p><span class="status"></span>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Card 2 -->
-                        <div class="col-md-4 mb-3">
-                            <div class="card border-success">
-                                <div class="card-body">
-                                    <h5 class="card-title">Application 2</h5>
-                                    <p class="card-text">Description of Application 2.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <div class="card border-success">
-                                <div class="card-body">
-                                    <h5 class="card-title">Application 3</h5>
-                                    <p class="card-text">Description of Application 3.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
+                        <!-- Card 1 -->
+                        <div class="col-md-2 mb-3">
                             <div class="card border-primary">
-                                <div class="card-body">
-                                    <h5 class="card-title">Application 1</h5>
-                                    <p class="card-text">Description of Application 1.</p>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Plex</h5>
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <p>Status:</p><span class="status"></span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card 2 -->
-                        <div class="col-md-4 mb-3">
-                            <div class="card border-success">
-                                <div class="card-body">
-                                    <h5 class="card-title">Application 2</h5>
-                                    <p class="card-text">Description of Application 2.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <div class="card border-success">
-                                <div class="card-body">
-                                    <h5 class="card-title">Application 3</h5>
-                                    <p class="card-text">Description of Application 3.</p>
-                                </div>
-                            </div>
+                        <div class="container">
+                            <h1 class="text-center">In The News</h1>
+                            <h2>Bernardo Arévalo taking the oath of office</h2>
+                            <ul>
+                                <li>Iran launches missile strikes in Pakistan and aerial strikes in Iraq and Syria, and
+                                    Pakistan responds with retaliatory airstrikes.</li>
+                                <li>Bernardo Arévalo is inaugurated (ceremony pictured) as President of Guatemala after
+                                    multiple attempts to obstruct the event.</li>
+                                <li>Queen Margrethe II abdicates and is succeeded by Frederik X as King of Denmark.</li>
+                                <li>Lai Ching-te is elected President of Taiwan.</li>
+                            </ul>
+                            <h2>Ongoing</h2>
+                            <ul>
+                                <li>Israel–Hamas war (Houthi involvement)</li>
+                                <li>Myanmar civil war</li>
+                                <li>Russian invasion of Ukraine</li>
+                                <li>War in Sudan</li>
+                            </ul>
+                            <h2>Recent deaths</h2>
+                            <ul>
+                                <li>Munawwar Rana</li>
+                                <li>Joyce Randolph</li>
+                                <li>Bernard Descôteaux</li>
+                                <li>Tom Shales</li>
+                                <li>Amalija Knavs</li>
+                                <li>Tony Lloyd</li>
+                            </ul>
                         </div>
 
-                        <!-- Repeat the pattern for Cards 3 to 12 -->
-                        <!-- ... -->
 
                     </div>
                 </div>
