@@ -18,29 +18,28 @@
                 <thead>
                     <tr>
                         <th scope="col">Server Uptime</th>
+                        <th scope="col">CPU Utlization</th>
+                        <th scope="col">Memory Utlization</th>
                         <th scope="col">Storage Utlization</th>
+                        <th scope="col">Bandwidth</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">36 hours</th>
+                        <td>50%</td>
+                        <td>50%</td>
                         <td>4200/8000 gb</td>
+                        <td>12mbps</td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row">
-                <canvas id="chart"></canvas>
-            </div>
         </div>
 
         <div class="row">
             <!-- Left Div (20%) -->
             <div id="weather" class="col-md-2">
                 <div class="bg p-3">
-                    <h5 class="mb-4">Left Side (20%)</h5>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
@@ -57,6 +56,7 @@
                                         29 Snow. Cloudy, with a high near 29. Northeast wind 5 to 10 mph. Chance of
                                         precipitation is 100%. New snow accumulation of 3 to 5 inches possible.
                                     </div>
+                                    <p id="last-updated-weather" class="text-center">Last Updated : Now</p>
                                 </div>
                             </div>
                         </div>
@@ -78,6 +78,8 @@
                                 <div class="card-body text-center">
                                     <h5 class="card-title">Plex</h5>
                                     <img src="..." class="card-img-top" alt="...">
+                                    <button>Start</button>
+                                    <button>Stop</button>
                                     <p>Status:</p><span class="status"></span>
                                 </div>
                             </div>
@@ -105,6 +107,7 @@
 
                         <div class="container">
                             <h1 class="text-center">In The News</h1>
+                            <p id="last-updated-news" class="text-center">Last Updated : Now</p>
                             <h2>Bernardo Arévalo taking the oath of office</h2>
                             <ul>
                                 <li>Iran launches missile strikes in Pakistan and aerial strikes in Iraq and Syria, and
@@ -135,6 +138,11 @@
 
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <canvas id="chart"></canvas>
             </div>
         </div>
     </div>
