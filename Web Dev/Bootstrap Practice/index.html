@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -17,20 +18,22 @@
                 <thead>
                     <tr>
                         <th scope="col">Server Uptime</th>
-                        <th scope="col">Cpu Utilization</th>
-                        <th scope="col">Memory Utlization</th>
                         <th scope="col">Storage Utlization</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">36 hours</th>
-                        <td>35%</td>
-                        <td>60%</td>
                         <td>4200/8000 gb</td>
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <canvas id="chart"></canvas>
+            </div>
         </div>
 
         <div class="row">
@@ -136,6 +139,7 @@
         </div>
     </div>
     <!-- Bootstrap JS and Popper.js -->
+    <script src="./script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
