@@ -7,8 +7,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
         body {
             background-color: #25262B;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #weather {
+            padding: 0px !important;
+            height: 100% !important;
+        }
+
+        #applications {
+            padding: 0px !important;
         }
 
         .card {
@@ -48,6 +59,7 @@
             font-size: 1rem;
             color: #6c757d;
         }
+       
     </style>
     <title>Application Selection Screen</title>
 </head>
@@ -57,7 +69,7 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Left Div (20%) -->
-            <div class="col-md-2">
+            <div id="weather" class="col-md-2">
                 <div class="bg-light p-3">
                     <h5 class="mb-4">Left Side (20%)</h5>
                     <div class="container">
@@ -78,7 +90,7 @@
             </div>
 
             <!-- Right Div (80%) -->
-            <div class="col-md-10">
+            <div id="applications" class="col-md-10">
                 <div class="bg-light p-3">
                     <h5 class="text-center mb-4">Application Selection</h5>
 
