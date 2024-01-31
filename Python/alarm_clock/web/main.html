@@ -9,9 +9,9 @@
     <script type="text/javascript" src="/eel.js"></script>
     <script type="text/javascript">
 eel.expose(updateTime, "updateTime")
-function updateTime(time, seconds) {
-    document.getElementById("time").innerHTML = time;
-    document.getElementById("seconds").innerHTML = seconds;
+function updateTime(time) {
+    document.getElementById("time").innerHTML = (time[0] + ':' + '' + time[1]);
+    document.getElementById("seconds").innerHTML = time[2];
 }
     </script>
 </head>
@@ -19,7 +19,7 @@ function updateTime(time, seconds) {
 <body>
     <div class="main">
         <div id="clock_wrapper">
-            <span id="morning_night">AM</span><span id="time">11:00</span><span id="seconds">08</span>
+            <span id="morning_night">AM</span><span id="time"></span><span id="seconds">08</span>
         </div>
     </div>
 </body>

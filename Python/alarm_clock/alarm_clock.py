@@ -29,14 +29,17 @@ class AlarmClock:
                 # write the config ini file with the config default values
                 config.write(configfile)
         # clock is running init method so set the current time to the current time
-        self.current_time = time.strftime("%I:%M %p")
+        self.current_time = 'Place Holder'
+        self.hours = None
+        self.minutes = None
         self.seconds = None
         # set am_pm
         self.am_pm = None
         # set alarm_state
         self.alarm_state = None
         # decides if it's morning or night based off the array index of 1 after splitting at the space in the returned string from current_time
-        if self.current_time.split(' ')[1] == 'AM':
+        self.current_time_string = time.strftime("%I:%M %p")
+        if self.current_time_string.split(' ')[1] == 'AM':
             self.am_pm = 'AM'
         else:
             self.am_pm = 'PM'
@@ -46,17 +49,18 @@ class AlarmClock:
     @eel.expose
     # update time method calls the javascript function and passes in a value of another
     # function that returns the current time of the instance of the alarmclock class
-    def update_time_ui(self, time, seconds):
-        eel.updateTime(time, seconds)
+    def update_time_ui(self, time):
+        eel.updateTime(time)
 
     def update_time(self):
          # Get the current time
-         current_timex = datetime.now().time()
+         current_time_obj = datetime.now().time()
          # Extract the seconds from the current time
-         self.seconds = current_timex.second
-         self.current_time = time.strftime("%I:%M %p")
-         self.update_time_ui(self.current_time, self.seconds)
-
+         self.hours = current_time_obj.hour
+         self.minutes = current_time_obj.minute
+         self.seconds = current_time_obj.second
+         self.current_time = self.hours, self.minutes, self.seconds
+         self.update_time_ui(self.current_time)
     def tick(self):
         while True:
             self.update_time()
