@@ -9,8 +9,9 @@
     <script type="text/javascript" src="/eel.js"></script>
     <script type="text/javascript">
 eel.expose(updateTime, "updateTime")
-function updateTime(value) {
-    document.getElementById("time").innerHTML = value;
+function updateTime(time, seconds) {
+    document.getElementById("time").innerHTML = time;
+    document.getElementById("seconds").innerHTML = seconds;
 }
     </script>
 </head>
