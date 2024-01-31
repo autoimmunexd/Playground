@@ -5,7 +5,6 @@
     <title>Alarm Clock</title>
     <!-- Include eel.js - note this file doesn't exist in the 'web' directory -->
     <link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
-    <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="/eel.js"></script>
     <script type="text/javascript">
 eel.expose(updateTime, "updateTime")
@@ -17,7 +16,103 @@ function updateTime(time) {
 </head>
 
 <body>
+    <style>
+ * {
+  overflow: hidden;
+  min-width: 500px;
+  max-width: 500px;
+  font-family: clock;
+  
+}
+
+body {
+    background-color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('./img/casio.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@font-face {
+  font-family: clock;
+  src: url('../font/alarm\ clock.ttf');
+}
+
+#main {
+  flex: 1;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: flex 0.5s;
+  background-color: #343541;
+}
+
+#sidebar {
+  flex: 0;
+  width: 100px;
+  background-color: #ccc;
+  transition: flex 0.5s, width 0.5s;
+}
+
+#clock_wrapper {
+    top: 12px;
+    height: 140px;
+    left: 48px;
+    max-width: 300px;
+    min-width: 300px;
+    padding: 0rem 2rem 2rem 2rem;
+    color: #00A9EE;
+    font-size: 5rem;
+    text-align: center;
+    position: relative;
+}
+#time,
+#morning_night,
+#seconds {
+  display: inline;
+  padding: 0;
+  margin: 0; /* Reset margin for inline elements */
+}
+
+#time {
+    font-weight: bold;
+    font-size: 5.8rem;
+    margin-top: 2rem;
+}
+
+#morning_night {
+    /* padding-bottom: 2rem; */
+    font-size: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#seconds {
+  z-index: 0;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+}
+
+#alarm-button {
+    position: absolute;
+    bottom: 0;
+    background-color: red;
+    height: 20px;
+    width: 100%;
+}
+
+    </style>
+    
     <div class="main">
+        <div id="alarm-button">SET ALARM!</div>
         <div id="clock_wrapper">
             <span id="morning_night">AM</span><span id="time"></span><span id="seconds">08</span>
         </div>

@@ -12,6 +12,7 @@ class AlarmClock:
     def __init__(self):
         # binds the thread to the specific instance of the class.  targets the tick() method and runs it in a seperate thread to stop blocking
         self.tick_thread = threading.Thread(target=self.tick)
+        self.tick_thread.daemon = True
         # if the config file exists
         if os.path.isfile('config.ini'):
             # open the config file and set to variable configfile
