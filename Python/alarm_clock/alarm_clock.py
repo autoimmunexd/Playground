@@ -62,10 +62,21 @@ class AlarmClock:
          self.seconds = current_time_obj.second
          self.current_time = self.hours, self.minutes, self.seconds
          self.update_time_ui(self.current_time)
+
+    def make_alarm(self):
+        pass
+
+    def delete_alarm(self):
+        pass
+
+    def toggle_alarm(self):
+        pass
+
     def tick(self):
         while True:
             self.update_time()
             time.sleep(1)
+            #check if alarm is set, if alarm is set
             print('tik')
 
 # if __name__ == '__main__':
