@@ -1,0 +1,44 @@
+@font-face {
+    font-family: digitalclock;
+    src: url(/web/font/alarm\ clock.ttf);
+}
+
+* {
+    font-family: digitalclock;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black; /* Optional background color for better visibility */
+  }
+
+  #main {
+    border: 2px solid #333;
+    padding: 20px;
+    text-align: center;
+  }
+
+  #clock_wrapper {
+    color: #00A9EE;
+    border: 2px dashed #666;
+    padding: 10px;
+    display: inline-block;
+    font-size: 5rem;
+  }
+
+  #time {
+    padding-left: 2rem;
+    padding-right: .5rem;
+  }
+  #morning_night {
+    font-size: 1rem;
+    position: absolute;
+  }
+
+  #seconds {
+    font-size: 3rem;
+  }
