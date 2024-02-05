@@ -1,44 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            width: 50%;
-            margin: auto;
-        }
-        .date {
-            text-align: center;
-            font-size: 1.2em;
-            margin-bottom: 1em;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        .form-group {
-            margin-bottom: 1em;
-        }
-        label {
-            margin-bottom: 0.5em;
-        }
-        select, button {
-            padding: 0.5em;
-        }
-        .title {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 1em;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="title">Daily Goal Tracking</div>
-        <div class="date" id="date"></div>
-        <form>
+<form method="post">
             <div class="form-group">
                 <label for="wakeup">What time do you wake up?</label>
                 <select id="wakeup">
@@ -161,9 +121,3 @@
             </div>            
             <button type="submit">Submit</button>
         </form>
-    </div>
-    <script>
-        document.getElementById('date').innerText = new Date().toDateString();
-    </script>
-</body>
-</html>

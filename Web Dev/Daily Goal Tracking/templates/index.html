@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Daily Goal Tracking</div>
+        <div class="date" id="date"></div>
+        {% include 'daily.jinja' %}
+    </div>
+</body>
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</html>
