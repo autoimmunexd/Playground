@@ -3,3 +3,7 @@ Python/cookies.json
 *.pyc
 *.h
 Web Dev/Daily Goal Tracking/config.py
+Linux/cloud_init/user-data.iso
+Linux/cloud_init/deb12-custom.iso
+Linux/cloud_init/deb12.iso
+Linux/cloud_init/deb12.iso
