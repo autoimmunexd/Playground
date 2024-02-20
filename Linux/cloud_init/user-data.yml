@@ -1,0 +1,29 @@
+#cloud-config
+hostname: piratebox
+
+users:
+  - name: firstmate
+    passwd: yarrmatey
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+
+ssh_pwauth: True
+
+package_update: true
+package_upgrade: true
+
+packages:
+  - docker
+  - docker-compose
+  - wget
+
+runcmd:
+  - echo "Server SSH Info:"
+  - echo "Hostname: $(hostname)"
+  - echo "Username: firstmate"
+  - echo "Password: yarrmatey"
+  - echo "You can now SSH into this server using the above credentials."
+  - echo "Downloading PirateBox Script"
+  - wget https://raw.githubusercontent.com/jcooper94/Shell-Scripts/main/Bash/piratebox.sh
+  - chmod +x /root/piratebox.sh
+  - /root/piratebox.sh
