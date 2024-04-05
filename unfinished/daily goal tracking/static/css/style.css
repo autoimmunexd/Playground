@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    width: 50%;
+    margin: auto;
+}
+.date {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    margin-bottom: 1em;
+}
+label {
+    margin-bottom: 0.5em;
+}
+select, button {
+    padding: 0.5em;
+}
+.title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Sub</title>
+</head>
+<style>
+    .only {
+        display: grid;
+        place-items: center;
+        /* Horizontally and vertically center */
+        height: 100vh;
+        /* Optional: Ensure the container fills the viewport height */
+    }
+
+    ul {
+        list-style-type: none;
+    }
+</style>
+
+<body>
+    {% include 'nav.html' %}
+    <div class="only">
+        <h1>Subcription Feed</h1>
+        <ul>
+            {% for video in channel_subs %}
+            <li>
+                <p>{{ video['Channel Name'] }}</p>
+                <p><strong>{{ video['Title'] }}</strong></p>
+                <a href="{{ video['Link'] }}">
+                    <img src="{{ video['Thumbnail'] }}" alt="{{ video['Title'] }}">
+                </a>
+                <p>Published Date: {{ video['Published Date'] }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>

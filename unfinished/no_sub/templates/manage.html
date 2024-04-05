@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Subscriptions</title>
+</head>
+<style>
+    .only {
+        display: grid;
+        place-items: center;
+        /* Horizontally and vertically center */
+        height: 100vh;
+        /* Optional: Ensure the container fills the viewport height */
+    }
+
+    ul {
+        list-style-type: none;
+    }
+</style>
+
+<body>
+    {% include 'nav.html' %}
+    <div class="only">
+        <div id="add">
+            <form action="/add" method="post">
+                <label for="subscription">Enter new subscription URL:</label><br>
+                <input type="text" id="subscription" name="subscription"><br>
+                <input type="submit" value="Add Subscription">
+            </form>
+        </div>
+        <ul>
+            {% for name in names %}
+            <div id="channel">
+                <li>{{ name }}</li><button>Remove</button>
+            </div>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>
